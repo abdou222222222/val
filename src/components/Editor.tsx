@@ -89,7 +89,6 @@ export const Editor = () => {
                     contentEditable
                     className="w-full min-h-[400px] p-8 outline-none font-romantic-header text-xl text-gray-700 leading-relaxed overflow-y-auto"
                     onInput={(e) => setContent(e.currentTarget.innerHTML)}
-                    dangerouslySetInnerHTML={{ __html: content }}
                 ></div>
             </div>
 

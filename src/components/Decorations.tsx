@@ -1,43 +1,44 @@
+import FloatingHearts from "./FloatingHearts";
 import pinkFlower from '../assets/page2/PinkFlower.png';
+import s14Feb from '../assets/page2/14Feb.png';
 import violetFlower from '../assets/page2/VilotFlower.png';
 import blueFlower from '../assets/page2/blueFlower.png';
 import yellowFlower from '../assets/page2/yellow flower.png';
-import bouquet from '../assets/page2/bouquet.png';
 import mixedFlowers from '../assets/page2/pink, red and purple flowers.png';
 
 export const Decorations = () => {
     return (
         <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+
+
+            <FloatingHearts count={800} />
             {/* Floating Images on the Left Side */}
             <img
                 src={pinkFlower}
                 alt=""
-                className="absolute top-[10%] left-[5%] w-20 md:w-28 opacity-80 animate-float-subtle"
+                className="absolute top-[50%] left-[12%] w-20 md:w-32 opacity-80 animate-float-subtle"
+                style={{ animationDelay: '1s' }}
+
             />
             <img
-                src={violetFlower}
+                src={s14Feb}
                 alt=""
-                className="absolute top-[35%] left-[8%] w-24 md:w-32 opacity-70 animate-float-subtle-delayed"
-                style={{ animationDelay: '1s' }}
+                className="absolute top-[5%] left-[0%] w-24 md:w-56 opacity-80 animate-float-subtle"
             />
+
             <img
                 src={yellowFlower}
                 alt=""
-                className="absolute top-[60%] left-[3%] w-16 md:w-24 opacity-75 animate-float-subtle"
+                className="absolute top-[80%] left-[3%] w-16 md:w-24 opacity-75 animate-float-subtle"
                 style={{ animationDelay: '2s' }}
             />
-            <img
-                src={bouquet}
-                alt=""
-                className="absolute bottom-[15%] left-[6%] w-28 md:w-36 opacity-65 animate-float-subtle-delayed"
-                style={{ animationDelay: '0.5s' }}
-            />
+
 
             {/* Floating Images on the Right Side */}
             <img
                 src={blueFlower}
                 alt=""
-                className="absolute top-[15%] right-[5%] w-22 md:w-30 opacity-75 animate-float-subtle"
+                className="absolute top-[15%] right-[2%] w-22 md:w-36 opacity-75 animate-float-subtle"
                 style={{ animationDelay: '1.5s' }}
             />
             <img

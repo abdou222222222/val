@@ -1,3 +1,6 @@
+import bouquet from '../assets/page2/bouquet.png';
+import violetFlower from '../assets/page2/VilotFlower.png';
+
 import { useEffect, useState } from 'react';
 import { Gift } from 'lucide-react';
 // DOMPurify removed for zero-dependency approach as planned
@@ -18,12 +21,23 @@ export const Letter = ({ content, onOpenGift }: LetterProps) => {
     }, []);
 
     return (
-        <div className={`relative w-full max-w-2xl mx-auto p-8 md:p-12 bg-[#ffffff] rounded-sm paper-shadow paper-texture transform rotate-1 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`relative w-full max-w-xl mx-auto p-8 md:p-12 bg-[#ffffff] rounded-sm paper-shadow paper-texture transform rotate-1 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Paper Texture Overlay */}
             <div className="absolute inset-0 opacity-10 pointer-events-none paper-grain"></div>
 
             <div className="relative z-10 flex flex-col items-center">
-
+                <img
+                    src={bouquet}
+                    alt=""
+                    className="absolute -top-24 -right-32 -rotate-12 w-28 md:w-36 opacity-65 animate-float-subtle-delayed"
+                    style={{ animationDelay: '0.5s' }}
+                />
+                <img
+                    src={violetFlower}
+                    alt=""
+                    className="absolute -left-24     -bottom-16 w-24 md:w-48 opacity-70 animate-float-subtle-delayed"
+                    style={{ animationDelay: '1s' }}
+                />
                 {/* Letter Content */}
                 <div
                     className="font-romantic-header text-gray-800 text-lg md:text-xl leading-relaxed text-center prose prose-pink max-w-none mb-8"

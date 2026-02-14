@@ -18,13 +18,15 @@ const ViewerMode = ({ content }: { content: string }) => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center">
       <RotateDevicePrompt />
-      <Decorations />
+        <Decorations />
 
       <div className={`z-10 w-full flex items-center justify-center min-h-[60vh] ${step === 'envelope' ? 'w-full h-screen' : 'max-w-4xl p-4'}`}>
         {step === 'envelope' ? (
           <Envelope onOpen={handleOpenEnvelope} />
         ) : (
+          <>
           <Letter content={content} onOpenGift={() => setIsGiftOpen(true)} />
+          </>
         )}
       </div>
 
